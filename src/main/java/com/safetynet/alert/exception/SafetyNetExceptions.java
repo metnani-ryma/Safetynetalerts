@@ -6,6 +6,7 @@ public class SafetyNetExceptions  {
 
 
 	    public static class DuplicateFirestationException extends RuntimeException {
+
 	        public DuplicateFirestationException() {
 	            super("Duplicate firestation found");
 	        }
@@ -16,12 +17,14 @@ public class SafetyNetExceptions  {
 	    }
 
 	    public static class DuplicateMedicalRecordException extends RuntimeException {
+
 	        public DuplicateMedicalRecordException(String message) {
 	            super(message);
 	        }
 	    }
 
 	    public static class DuplicatedPersonException extends RuntimeException {
+
 	        public DuplicatedPersonException() {
 	            super("Duplicate person found");
 	        }
@@ -32,6 +35,7 @@ public class SafetyNetExceptions  {
 	    }
 
 	    public static class FirestationNotFoundException extends RuntimeException {
+
 	        public FirestationNotFoundException() {
 	            super("Fire station not found");
 	        }
@@ -42,7 +46,8 @@ public class SafetyNetExceptions  {
 	    }
 
 
-	    public class IncompleteRequestException extends RuntimeException{
+	    public static class IncompleteRequestException extends RuntimeException{
+
 	        public IncompleteRequestException(){
 	            super("Incomplete request");
 	        }
@@ -51,7 +56,8 @@ public class SafetyNetExceptions  {
 	        }
 	    }
 
-	    public class MedicalRecordNotFoundException extends RuntimeException{
+	    public static class MedicalRecordNotFoundException extends RuntimeException{
+
 	        public MedicalRecordNotFoundException() {
 	            super("Medical Record not found");
 	        }
@@ -61,7 +67,8 @@ public class SafetyNetExceptions  {
 	        }
 	    }
 
-	    public class PersonNotFoundException extends RuntimeException{
+	    public static class PersonNotFoundException extends RuntimeException{
+
 	        public PersonNotFoundException() {
 	            super("Person not found");
 	        }

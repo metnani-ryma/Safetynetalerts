@@ -4,10 +4,12 @@ package com.safetynet.alert.repository;
 
 
 
+import static com.safetynet.alert.util.JsonDataExtractor.extractDataFromJson;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
@@ -15,11 +17,7 @@ import com.safetynet.alert.exception.SafetyNetExceptions.DuplicateFirestationExc
 import com.safetynet.alert.exception.SafetyNetExceptions.FirestationNotFoundException;
 import com.safetynet.alert.model.Firestation;
 
-
-
 import lombok.extern.log4j.Log4j2;
-
-import static com.safetynet.alert.util.JsonDataExtractor.extractDataFromJson;
 
 
 @Log4j2
@@ -29,7 +27,7 @@ public class FirestationRepositoryImpl implements FirestationRepository {
 
 	private final List<Firestation> listOfAllFirestations;
 
-	@Autowired
+	//@Autowired
 	public FirestationRepositoryImpl() {
 		this.listOfAllFirestations = extractDataFromJson().getFirestations();
 	}
