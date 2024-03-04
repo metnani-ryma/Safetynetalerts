@@ -25,13 +25,16 @@ import lombok.extern.log4j.Log4j2;
 @Primary
 public class FirestationRepositoryImpl implements FirestationRepository {
 
-	private final List<Firestation> listOfAllFirestations;
+	 List<Firestation> listOfAllFirestations;
 
 	//@Autowired
 	public FirestationRepositoryImpl() {
 		this.listOfAllFirestations = extractDataFromJson().getFirestations();
 	}
-
+	
+    public FirestationRepositoryImpl(List<Firestation> listOfAllFirestations){
+        this.listOfAllFirestations = listOfAllFirestations;
+    }
 	@Override
 	public List<String> findAddressByFirestationNumber(String firestationNumber) {
 		log.debug("findAddressByFirestationNumber() {}", firestationNumber);
